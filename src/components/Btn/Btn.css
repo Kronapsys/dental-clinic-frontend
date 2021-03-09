@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap'); */
 
 .btn {
 	color: rgb(252, 252, 252);
 	transition: all 0.3s;
 	position: relative;
     margin-left: 0.5em;
-    font-family: 'Fira Sans Condensed', sans-serif;
+    /* font-family: 'Fira Sans Condensed', sans-serif; */
+	font-family: 'Poiret One', cursive;
 	cursor: pointer;
 }
 

@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+.footer{
+    height: 3em;
+    background-color: rgb(0, 0, 200);
+
+    font-family: 'Poiret One', cursive;
+    color: white;
+    font-size: 0.9em;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.redesSociales{
+    display: flex;
+    flex-direction: row;
+}
+
+.twitter{
+    padding: 0.2em;
+}
+
+.facebook{
+    padding: 0.2em;
+}
+
+.instagram{
+    padding: 0.2em;
+}
