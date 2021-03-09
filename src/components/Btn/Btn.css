@@ -1,24 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap');
-/* .btn{
-    height: 1.8em;
-    width: 4.5em;
-
-    background-color: rgba(138,230,255,255);
-    transition: 0.3s;
-
-    border-radius: 0.5em;
-    border: solid black 0.12em;
-    margin: 0.2em;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.btn:hover {
-    transition: 0.5s;
-    
-} */
 
 .btn {
 	color: rgb(252, 252, 252);
@@ -26,8 +6,7 @@
 	position: relative;
     margin-left: 0.5em;
     font-family: 'Fira Sans Condensed', sans-serif;
-    height: 1.8em;
-    width: 4.5em;
+	cursor: pointer;
 }
 
 .btn span {
@@ -71,7 +50,7 @@
 	height: 100%;
 	z-index: 1;
 	transition: all 0.3s;
-	background-color: rgba(255,255,255,0.1);
+	background-color: rgba(255, 255, 255, 0.233);
 }
 
 .btn:hover::after {

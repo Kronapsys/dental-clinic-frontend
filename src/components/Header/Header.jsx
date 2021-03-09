@@ -12,13 +12,12 @@ const Header = () => {
             </div>
 
             <div className='btnGroup'>
-                <Boton nombre="Entrar" destino="logIn"/>
-                <Boton nombre="Registrate" destino="register"/>  
-            </div>
-                    
-            
-            
+                <Boton nombre='Entrar' destino='logIn'/>
+                <Boton nombre='Registrate' destino='register'/>  
+            </div> 
+                        
         </div>
+        
     );
 };
 
