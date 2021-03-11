@@ -10,15 +10,15 @@
 
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .homeHorario{
-    height: 15em;
-    width: 15em;
+    height: 22em;
+    width: 10em;
 
     background-color: rgba(0, 0, 0, 0.274);
     border-radius: 2em;
-    padding-top: 1em;
     margin: 1em;
 
     display: flex;
@@ -31,16 +31,140 @@
 }
 
 .homeServicios{
-    height: 15em;
-    width: 30em;
+    height: 33em;
+    width: 75em;
 
     background-color: rgba(0, 0, 0, 0.274);
     border-radius: 2em;
-    padding-top: 1em;
     margin: 1em;
 
     display: flex;
     flex-direction: column;
+    align-items: center;
+
+    font-family: 'Poiret One', cursive;
+    color: white;
+    font-weight: bold;
+}
+
+.homeServicios1{
+    height: 5.5em;
+    width: 70em;
+    margin: 1em 0em 0.5em 0em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.homeServicios1Izq{
+    height: 2em;
+    font-size: 2.5em;
+    
+    display: flex;
+    align-items: center;
+}
+
+.homeServicios1Der{
+    height: 5em;   
+    text-align: end;
+}
+
+.homeServicios2Izq{
+    height: 2em;
+    font-size: 2.5em;
+    
+    display: flex;
+    align-items: center;
+}
+
+.homeServicios2Der{
+    height: 5em;   
+    text-align: end;
+}
+
+.homeServicios3Izq{
+    height: 2em;
+    font-size: 2.5em;
+    
+    display: flex;
+    align-items: center;
+}
+
+.homeServicios3Der{
+    height: 5em;   
+    text-align: end;
+}
+
+.homeServicios4Izq{
+    height: 2em;
+    font-size: 2.5em;
+    
+    display: flex;
+    align-items: center;
+}
+
+.homeServicios4Der{
+    height: 5em;   
+    text-align: end;
+}
+
+.homeServicios5Izq{
+    height: 2em;
+    font-size: 2.5em;
+    
+    display: flex;
+    align-items: center;
+}
+
+.homeServicios5Der{
+    height: 5em; 
+    text-align: end;  
+}
+
+
+.homeServicios2{
+    height: 5.5em;
+    width: 70em;
+    margin: 1em 0em 0.5em 0em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.homeServicios3{
+    height: 5.5em;
+    width: 70em;
+    margin: 1em 0em 0.5em 0em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.homeServicios4{
+    height: 5.5em;
+    width: 70em;
+    margin: 1em 0em 0.5em 0em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.homeServicios5{
+    height: 6em;
+    width: 70em;
+    margin: 1em 0em 1em 0em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -49,6 +173,9 @@
     font-size: 1em;
     font-weight: bold;
     color: white;
+    text-decoration: underline white;
+
+    margin: 2em 0.5em 1em 0.5em;
 }
 
 .lblDias{
@@ -56,4 +183,6 @@
     font-size: 0.7em;
     font-weight: bold;
     color: white;
+    margin: 1em;
 }
+
