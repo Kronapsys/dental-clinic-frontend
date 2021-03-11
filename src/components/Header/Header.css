@@ -19,6 +19,7 @@
     flex-direction: row;
     align-items: center;
     height: 4em;
+    cursor: pointer;
 }
 
 .btnGroup{

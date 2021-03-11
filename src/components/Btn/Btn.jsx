@@ -10,7 +10,7 @@ const Btn = (props) => {
         history.push(`/${props.destino}`);
     };
 
-    return( // Comentar a Ochando
+    return(
         <div onClick={direccioname} className="btn">
             {props.nombre}
         </div>
