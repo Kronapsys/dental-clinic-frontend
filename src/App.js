@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import NavBar from './components/Navbar/NavBar';
 import Footer from './components/Footer/Footer';
 import Login from './containers/LogIn/LogIn';
+import Staff from './containers/Staff/Staff';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home}/>
           <Route path="/logIn" exact component={Login}/>
+          <Route path='/staff' exact component={Staff}/>
         </Switch>
 
         <Footer/>

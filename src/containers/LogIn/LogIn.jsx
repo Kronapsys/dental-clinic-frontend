@@ -28,12 +28,14 @@ const Login = () => {
 
   return (
     <div className="login">
-      {/* <div className='formLogIn'>
+      <div className="relleno"></div>
+      <div className='formLogIn'>
                 Email: <input className='emailInput' type='email' name='email' title='Email' lenght='30' onChange={handleState}/>
                 Password: <input className='passwordInput' type='password' name='password' title='Password' lenght='16' onChange={handleState}/>
                 <button className='btnEntrar' type='submit' onClick={logeame}>Entrar</button>
-            </div> */}
-     
+
+            </div>
+
     </div>
   );
 };

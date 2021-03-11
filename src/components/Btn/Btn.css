@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 
 
 .btn {
@@ -7,8 +7,7 @@
 	transition: all 0.3s;
 	position: relative;
     margin-left: 0.5em;
-    font-family: 'Roboto', sans-serif;
-	/* font-family: 'Poiret One', cursive; */
+	font-family: 'Poiret One', cursive;
 	cursor: pointer;
 }
 

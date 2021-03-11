@@ -1,0 +1,8 @@
+.staff {
+    height: 80.5vh;
+    background-image: url(../../img/staff-background.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
