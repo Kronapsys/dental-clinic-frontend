@@ -36,7 +36,7 @@ const Login = () => {
 
         let errorMessage = checkError(dataLogin);
         setMessage(errorMessage);
-        console.log(errorMessage);
+        // console.log(errorMessage);
         if(errorMessage) {
             return;
         }
