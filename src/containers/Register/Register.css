@@ -14,16 +14,18 @@
 
     font-family: 'Poiret One', cursive;
     color: rgb(0, 0, 255);
+    font-weight: bold;
+    font-size: 1em;
 
 }
 
 .rellenoRegister{
-    height: 2.5em;
+    height: 1.5em;
 }
 
 .formRegister{
 
-    height: 30em;
+    height: 32em;
     width: 30em;
 
     background-color: rgba(0, 0, 0, 0.274);
@@ -73,6 +75,10 @@
     margin: 1.5em;
     font-family: 'Poiret One', cursive;
     color: rgb(0, 0, 255);
+
+    font-size: 1em;
+    font-weight: bold;
+    border-color: rgb(255, 255, 255);
 }
 
 .btnRegister:hover{

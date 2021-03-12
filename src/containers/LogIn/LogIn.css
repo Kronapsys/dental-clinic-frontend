@@ -55,6 +55,9 @@
     margin: 1.5em;
     font-family: 'Poiret One', cursive;
     color: rgb(0, 0, 255);
+    font-size: 1em;
+    font-weight: bold;
+    border-color: rgb(255, 255, 255);
 }
 
 .btnEntrar:hover{
