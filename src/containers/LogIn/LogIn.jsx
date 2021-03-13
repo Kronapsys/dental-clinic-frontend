@@ -3,6 +3,8 @@ import "./LogIn.css";
 import axios from "axios";
 import { useHistory } from 'react-router-dom';
 import  checkError  from '../../utils/util'
+import Header from '../../components/Header/Header';
+import NavBar from '../../components/Navbar/NavBar';
 
 const Login = () => {
 
@@ -42,7 +44,7 @@ const Login = () => {
         }
 
         let result = await axios.post("http://localhost:3001/signin", dataLogin);
-        localStorage.setItem("miObjeto", JSON.stringify(result.data));
+        localStorage.setItem("user", JSON.stringify(result.data));
 
         history.push(`/`);
         console.log(result);
@@ -50,6 +52,9 @@ const Login = () => {
 
     // <pre>{JSON.stringify(dataLogin, null,2)}</pre>
     return (
+        <div>
+        <Header></Header>
+        <NavBar></NavBar>
         <div className="login">
 
             <div className="rellenoLogin"></div>
@@ -60,6 +65,7 @@ const Login = () => {
 
                 <div className='errorMsg'>{message}</div>
             </div>
+        </div>
         </div>
     );
 };

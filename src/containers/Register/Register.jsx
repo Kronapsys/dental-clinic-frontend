@@ -3,6 +3,8 @@ import './Register.css';
 import axios from 'axios';
 import  checkError  from '../../utils/util'
 import { useHistory } from 'react-router-dom';
+import Header from '../../components/Header/Header';
+import NavBar from '../../components/Navbar/NavBar';
 
 
 const Register = () => {
@@ -63,6 +65,9 @@ const Register = () => {
     };
 
     return(
+        <div>
+        <Header></Header>
+        <NavBar></NavBar>
         <div className='register'>
             <div className="rellenoRegister"></div>
             <div className='formRegister'>
@@ -75,6 +80,7 @@ const Register = () => {
                 <button className='btnRegister' type='submit' onClick={registrame}>Darme de alta</button>
             <div className='errorMessage'>{message}</div>
             </div>
+        </div>
         </div>
     );
 };

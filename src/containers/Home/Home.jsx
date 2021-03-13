@@ -1,8 +1,13 @@
 import React from "react";
 import "./Home.css";
+import Header from '../../components/Header/Header';
+import NavBar from '../../components/Navbar/NavBar';
 
 const Home = () => {
   return (
+    <div>
+    <Header></Header>
+    <NavBar></NavBar>
     <div className="home">
       <div className="homeHorario">
         <label className="lblHorario">HORARIO:</label> <br />
@@ -21,7 +26,7 @@ const Home = () => {
             Implantes de carga inmediata <br/>
             Puente dental sobre implantes <br/>
             Implante dental unitario <br/>
-            
+
           </div>
         </div>
 
@@ -67,6 +72,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
