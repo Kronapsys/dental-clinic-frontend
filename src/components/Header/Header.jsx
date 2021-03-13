@@ -7,6 +7,14 @@ import {useHistory} from 'react-router-dom';
 const Header = () => {
 
     let history = useHistory();
+    let user = JSON.parse(localStorage.getItem('user'));
+
+    //Función logout
+    const logout = () => {
+
+        localStorage.clear();
+        history.push('/');
+    }
 
     const direccioname = () => {
         history.push(`/`);
@@ -19,13 +27,32 @@ const Header = () => {
                 <img src='../img/banner.png' alt='banner' onClick={direccioname}/>
             </div>
 
-            <div className='btnGroup'>
-                <Btn nombre='Entrar' destino='logIn'/>
-                <Btn nombre='Registrate' destino='register'/>  
-            </div> 
-                        
+            {
+                localStorage.getItem('user')
+                    ?
+
+                    <>
+                        <div className='btnGroup'>
+                            <Btn nombre={user.customer.name} destino='profile' />
+                            <button className='btn-logout' onClick={logout}>Logout</button>
+
+
+                        </div>
+                    </>
+
+                    :
+
+                    <>
+                        <div className='btnGroup'>
+                            <Btn nombre='Entrar' destino='logIn' />
+                            <Btn nombre='Registrate' destino='register' />
+                        </div>
+                    </>
+
+            }
+
         </div>
-        
+
     );
 };
 

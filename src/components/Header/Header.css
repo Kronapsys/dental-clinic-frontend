@@ -28,3 +28,9 @@
     align-items: center;
     justify-content: space-between;
 }
+
+.btn-logout {
+
+    border-radius: 1em;
+
+}
