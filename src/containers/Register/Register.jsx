@@ -39,6 +39,7 @@ const Register = () => {
             name: dataRegister.name,
             surname: dataRegister.surname,
             address: dataRegister.address,
+            telephone: dataRegister.telephone,
             email: dataRegister.email,
             password: dataRegister.password
 

@@ -5,6 +5,7 @@ import Footer from './components/Footer/Footer';
 import Login from './containers/LogIn/LogIn';
 import Staff from './containers/Staff/Staff';
 import Register from './containers/Register/Register';
+import Profile from './containers/Profile/Profile';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/logIn" exact component={Login}/>
           <Route path='/staff' exact component={Staff}/>
           <Route path='/register' exact component={Register}/>
+          <Route path='/profile' exact component={Profile}/>
         </Switch>
 
         <Footer/>
