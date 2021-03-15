@@ -9,9 +9,9 @@ const Staff = () => {
         <div>
             <Header></Header>
             <NavBar></NavBar>
-        <div className='staff'>
+            <div className='staff'>
 
-        </div>
+            </div>
         </div>
     );
 };

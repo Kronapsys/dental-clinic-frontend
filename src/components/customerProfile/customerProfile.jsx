@@ -1,6 +1,6 @@
 import React from 'react';
 import './customerProfile.css';
-import logoImg from '../../img/logo2.jpg';
+import logoImg from '../../img/profile_card.png';
 
 const CustomerProfile = () => {
 
@@ -8,13 +8,14 @@ const CustomerProfile = () => {
 
 
     return (
-            <div className="card">
-                <img className="logo" src={logoImg} alt='logo'/>
-                    <h1>{user.customer.name} {user.customer.surname}</h1>
-                    <p className="title">{user.customer.address}</p>
-                    <p>{user.customer.telephone}<i className="fa fa-phone"></i></p>
-                    <p>{user.customer.email}<i className="fa fa-envelope"></i></p>
-
+            <div className="cardCustomer">
+                <div className="card">
+                    <img className="logo" src={logoImg} alt='logo'/>
+                    <h1> {user.customer.name} {user.customer.surname} </h1>
+                    <p> <i className="fas fa-map-signs"> </i> : {user.customer.address} </p>
+                    <p> <i className="fas fa-phone-alt"> </i> : {user.customer.telephone} </p>
+                    <p> <i className="fa fa-envelope"> </i> : {user.customer.email} </p>
+                </div>
             </div>
     )
 };

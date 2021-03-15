@@ -10,10 +10,11 @@ const Profile = () => {
         <div>
             <Header></Header>
             <NavBar></NavBar>
-        <div className='profile'>
-        <CustomerProfile />
+            <div className='profile'>
+                <CustomerProfile />
+            </div>
         </div>
-        </div>
+        
     );
 };
 
