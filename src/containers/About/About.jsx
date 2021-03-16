@@ -9,8 +9,11 @@ const About = () => {
         <div>
             <Header></Header>
             <NavBar></NavBar>
-        <div className='about'>
-        </div>
+
+            <div className='about'>
+
+            </div>
+            
         </div>
     );
 };

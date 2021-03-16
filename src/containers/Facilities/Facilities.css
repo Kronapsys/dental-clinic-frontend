@@ -1,4 +1,8 @@
 .facilities {
     height: 80.5vh;
-
+    background-image: url(../../img/facilities-background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
 }

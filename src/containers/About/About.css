@@ -1,4 +1,8 @@
 .about {
     height: 80.5vh;
-
+    background-image: url(../../img/aboutUs-background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    z-index: -1;
 }

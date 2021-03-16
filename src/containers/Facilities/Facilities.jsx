@@ -9,8 +9,10 @@ const Facilities = () => {
         <div>
             <Header></Header>
             <NavBar></NavBar>
-        <div className='facilities'>
-        </div>
+            <div className='facilities'>
+
+            </div>
+            
         </div>
     );
 };

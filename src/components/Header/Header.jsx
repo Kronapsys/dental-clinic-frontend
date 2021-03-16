@@ -10,11 +10,11 @@ const Header = () => {
     let user = JSON.parse(localStorage.getItem('user'));
 
     //Función logout
-    const logout = () => {
+    // const logout = () => {
 
-        localStorage.clear();
-        history.push('/');
-    }
+    //     localStorage.clear();
+    //     history.push('/');
+    // }
 
     const direccioname = () => {
         history.push(`/`);
@@ -34,7 +34,10 @@ const Header = () => {
                     <>
                         <div className='btnGroup'>
                             <Btn nombre={user.customer.name} destino='profile' />
-                            <button className='btn-logout' onClick={logout}>Logout</button>
+                            <Btn nombre='Log Out' destino='' onClick={direccioname} />
+
+                            {/* Antiguo boton log out */}
+                            {/* <button className='btn-logout' onClick={logout}>Logout</button> */}
 
 
                         </div>
