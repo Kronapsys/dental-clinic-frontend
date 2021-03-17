@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
 .header {
     height: 4em;
 
@@ -30,7 +32,17 @@
 }
 
 .btn-logout {
-
     border-radius: 1em;
     cursor: pointer;
+}
+
+.fas{
+    color: white;
+    margin-left: 1em;
+    cursor: pointer;
+}
+
+.saludo{
+    font-family: 'Poiret One', cursive;
+    color: white;
 }

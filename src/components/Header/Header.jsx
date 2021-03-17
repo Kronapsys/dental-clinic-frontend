@@ -13,7 +13,7 @@ const Header = (props) => {
   const logOut = () => {
     //procedemos a borrar los datos de usuario de RDX y así conseguiremos el logOut
     props.dispatch({ type: LOGOUT, payload: {} });
-
+    console.log("funcion logout activada bitch !")
     history.push("/");
   };
 
@@ -28,8 +28,8 @@ const Header = (props) => {
           <img src="../img/banner.png" alt="banner" onClick={direccioname} />
         </div>
         <div className="btnGroup">
-          <Btn nombre={props.user?.customer.name} destino="profile" />
-          <Btn nombre="Salir" destino="" onClick={logOut} />
+          <p className="saludo">Hola, </p><Btn nombre={props.user?.customer.name} destino="profile" />
+          <i className="fas fa-sign-out-alt fa-2x" onClick={logOut}></i>
         </div>
       </div>
     );
