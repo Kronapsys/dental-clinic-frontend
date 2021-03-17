@@ -5,9 +5,11 @@ import  checkError  from '../../utils/util'
 import { useHistory } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import NavBar from '../../components/Navbar/NavBar';
+import { REGISTER } from '../../redux/types/userType';
+import { connect } from 'react-redux';
 
 
-const Register = () => {
+const Register = (props) => {
 
     const history = useHistory();
 
@@ -60,6 +62,11 @@ const Register = () => {
         let result = await axios.post("http://localhost:3001/signup", body);
         console.log(result);
 
+        props.dispatch({
+            type: REGISTER,
+            payload: result
+        });
+
         return setTimeout(() => {
             history.push('/logIn')
         }, 1000);
@@ -86,4 +93,4 @@ const Register = () => {
     );
 };
 
-export default Register;
+export default connect()(Register);
