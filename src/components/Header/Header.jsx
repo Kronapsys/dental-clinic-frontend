@@ -1,62 +1,58 @@
-import React from 'react';
-import './Header.css';
-import Btn from '../../components/Btn/Btn';
-import {useHistory} from 'react-router-dom';
+import React from "react";
+import "./Header.css";
+import Btn from "../../components/Btn/Btn";
+import { useHistory } from "react-router-dom";
+import { connect } from "react-redux";
+import { LOGOUT } from "../../redux/types/userType.js";
 
+const Header = (props) => {
+  let history = useHistory();
+  // let user = JSON.parse(localStorage.getItem('user'));
 
-const Header = () => {
+  //Función logout
+  const logOut = () => {
+    //procedemos a borrar los datos de usuario de RDX y así conseguiremos el logOut
+    props.dispatch({ type: LOGOUT, payload: {} });
 
-    let history = useHistory();
-    let user = JSON.parse(localStorage.getItem('user'));
+    history.push("/");
+  };
 
-    //Función logout
-    // const logout = () => {
+  const direccioname = () => {
+    history.push(`/`);
+  };
 
-    //     localStorage.clear();
-    //     history.push('/');
-    // }
-
-    const direccioname = () => {
-        history.push(`/`);
-    };
-
+  if (props.user?.token) {
     return (
-        <div className='header'>
-
-            <div className='bannerHeader' >
-                <img src='../img/banner.png' alt='banner' onClick={direccioname}/>
-            </div>
-
-            {
-                localStorage.getItem('user')
-                    ?
-
-                    <>
-                        <div className='btnGroup'>
-                            <Btn nombre={user.customer.name} destino='profile' />
-                            <Btn nombre='Log Out' destino='' onClick={direccioname} />
-
-                            {/* Antiguo boton log out */}
-                            {/* <button className='btn-logout' onClick={logout}>Logout</button> */}
-
-
-                        </div>
-                    </>
-
-                    :
-
-                    <>
-                        <div className='btnGroup'>
-                            <Btn nombre='Entrar' destino='logIn' />
-                            <Btn nombre='Registrate' destino='register' />
-                        </div>
-                    </>
-
-            }
-
+      <div className="header">
+        <div className="bannerHeader">
+          <img src="../img/banner.png" alt="banner" onClick={direccioname} />
+        </div>
+        <div className="btnGroup">
+          <Btn nombre={props.user?.customer.name} destino="profile" />
+          <Btn nombre="Salir" destino="" onClick={logOut} />
+        </div>
+      </div>
+    );
+  } else {
+    return (
+      <div className="header">
+        <div className="bannerHeader">
+          <img src="../img/banner.png" alt="banner" onClick={direccioname} />
         </div>
 
+        <div className="btnGroup">
+          <Btn nombre="Entrar" destino="logIn" />
+          <Btn nombre="Registrate" destino="register" />
+        </div>
+      </div>
     );
+  }
 };
 
-export default Header;
+const mapStateToProps = (state) => {
+  return {
+    user: state.userReducer.user,
+  };
+};
+
+export default connect(mapStateToProps)(Header);

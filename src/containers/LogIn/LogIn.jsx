@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import "./LogIn.css";
 import axios from "axios";
 import { useHistory } from 'react-router-dom';
-import  checkError  from '../../utils/util'
-import Header from '../../components/Header/Header';
-import NavBar from '../../components/Navbar/NavBar';
+import  checkError  from '../../utils/util';
+import {LOGIN} from '../../redux/types/userType.js';
+import {connect} from 'react-redux';
 
-const Login = () => {
+const Login = (props) => {
 
     let history = useHistory();
 
@@ -44,17 +44,15 @@ const Login = () => {
         }
 
         let result = await axios.post("http://localhost:3001/signin", dataLogin);
-        localStorage.setItem("user", JSON.stringify(result.data));
-
+        props.dispatch({type: LOGIN, payload: result.data});
         history.push(`/`);
-        console.log(result);
+        console.log(result.data);
     };
 
     // <pre>{JSON.stringify(dataLogin, null,2)}</pre>
     return (
         <div>
-        <Header></Header>
-        <NavBar></NavBar>
+
         <div className="login">
 
             <div className="rellenoLogin"></div>
@@ -70,4 +68,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default connect()(Login);

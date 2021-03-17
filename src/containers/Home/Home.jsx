@@ -1,13 +1,9 @@
 import React from "react";
 import "./Home.css";
-import Header from '../../components/Header/Header';
-import NavBar from '../../components/Navbar/NavBar';
 
 const Home = () => {
   return (
     <div>
-    <Header></Header>
-    <NavBar></NavBar>
     <div className="home">
       <div className="homeHorario">
         <label className="lblHorario">HORARIO:</label> <br />

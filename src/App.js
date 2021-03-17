@@ -8,12 +8,17 @@ import Register from './containers/Register/Register';
 import Profile from './containers/Profile/Profile';
 import Facilities from './containers/Facilities/Facilities';
 import About from './containers/About/About';
+import Header from './components/Header/Header';
+import NavBar from './components/Navbar/NavBar';
+
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
 
+        <Header/>
+        <NavBar/>
 
         <Switch>
           <Route path="/" exact component={Home}/>

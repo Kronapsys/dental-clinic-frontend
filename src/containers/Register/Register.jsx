@@ -3,8 +3,6 @@ import './Register.css';
 import axios from 'axios';
 import  checkError  from '../../utils/util'
 import { useHistory } from 'react-router-dom';
-import Header from '../../components/Header/Header';
-import NavBar from '../../components/Navbar/NavBar';
 import { REGISTER } from '../../redux/types/userType';
 import { connect } from 'react-redux';
 
@@ -74,8 +72,7 @@ const Register = (props) => {
 
     return(
         <div>
-        <Header></Header>
-        <NavBar></NavBar>
+        
         <div className='register'>
             <div className="rellenoRegister"></div>
             <div className='formRegister'>
