@@ -10,6 +10,7 @@ import Facilities from './containers/Facilities/Facilities';
 import About from './containers/About/About';
 import Header from './components/Header/Header';
 import NavBar from './components/Navbar/NavBar';
+import Appointment from './containers/Appointment/Appointment';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path='/profile' exact component={Profile}/>
           <Route path='/Facilities' exact component={Facilities}/>
           <Route path='/AboutUs' exact component={About}/>
+          <Route path='/appointment' exact component={Appointment}/>
         </Switch>
 
         <Footer/>

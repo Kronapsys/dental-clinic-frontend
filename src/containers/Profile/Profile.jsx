@@ -2,8 +2,16 @@ import React from 'react';
 import './Profile.css';
 import CustomerProfile from '../../components/customerProfile/customerProfile';
 import { connect } from "react-redux";
+import { useHistory } from "react-router-dom";
+
 
 const Profile = (props) => {
+
+    let history = useHistory();
+
+    const direccioname = () => {
+        history.push(`/appointment`);
+    };
 
     return (
         <div className='profile'>
@@ -19,7 +27,7 @@ const Profile = (props) => {
                 </div>
             </div>
             <div className="botonCita">
-                    <button className="btnCita">PEDIR CITA</button>
+                    <button className="btnCita" onClick={direccioname}>PEDIR CITA</button>
                 </div>
         </div>
 
