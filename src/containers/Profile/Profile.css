@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 
 .profile {
     height: 80.5vh;
@@ -66,3 +68,28 @@
     color: red;
     cursor: pointer;
 }
+
+.botonCita {
+    margin-top: 3em;
+}
+
+.btnCita {
+    border-radius: .5em;
+    color: black;
+    font-weight: bold;
+    background-color: yellow;
+    padding: 14px 40px;
+    font-size: large;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.btnCita:hover {
+    background-color: red;
+    color: white;
+
+}
+
