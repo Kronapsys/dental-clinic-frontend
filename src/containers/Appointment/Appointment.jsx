@@ -53,7 +53,7 @@ const Appointment = (props) => {
             <div className='formLogIn'>
                 Fecha: <input className='emailInput' type='date' name='date' title='Date' onChange={handleState} />
                 Descripcion: <input className='passwordInput' type='text' name='description' title='description'  lenght='50' onChange={handleState} />
-                Descripcion: <input className='passwordInput' type='number' name='customerId' title='customerId'  lenght='50' onChange={handleState} />
+                ID: <input className='passwordInput' type='number' name='customerId' title='customerId'  lenght='50' onChange={handleState} />
                 <button className='btnEntrar' type='submit' onClick={createAppointment}>PEDIR CITA</button>
 
             </div>
