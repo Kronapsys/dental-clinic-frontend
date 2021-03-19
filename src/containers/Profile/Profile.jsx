@@ -28,13 +28,17 @@ import "moment/locale/es";
     getAppointments();
   }, []);
 
+
   const deleteAppointment = async () => {
     let result = await axios.delete(
-      `http://localhost:3001/appointments/${props.appointment?.id}`
+      `http://localhost:3001/appointments/${props.appointment?.id}`,
+      { headers: { Authorization: `Bearer ${props.user.token}` } }
     );
     props.dispatch({ type: DELETE_APPOINTMENT, payload: result.data });
     console.log(result);
   };
+
+
 
   if (props.user?.token) {
     return (
@@ -43,11 +47,15 @@ import "moment/locale/es";
           <CustomerProfile />
         </div>
         <div className="visorCitas">
-          {props.appointment[0] === undefined ? (
+          {props.appointment[0] === undefined
+          ?
+          (
             <>
               <div className="cardCita">NO TIENES CITAS ACTUALMENTE</div>
             </>
-          ) : (
+          )
+          :
+          (
             <>
               <div>
                 {props.appointment.map((appointment) => {
@@ -87,7 +95,7 @@ import "moment/locale/es";
 const mapStateToProps = (state) => {
   return {
     user: state.userReducer.user,
-    appointment: state.appointmentReducer.appointment,
+    appointment: state.appointmentReducer.appointment
   }
 };
 
