@@ -99,4 +99,8 @@ const mapStateToProps = (state) => {
   }
 };
 
-export default connect(mapStateToProps)(Profile);
+const mapDispatchToProps = dispatch => ({
+  deleteAppointment: id => dispatch(DELETE_APPOINTMENT(id))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Profile);
