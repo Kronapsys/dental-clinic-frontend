@@ -4,18 +4,17 @@ import CustomerProfile from "../../components/customerProfile/customerProfile";
 import { connect } from "react-redux";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
-import {
-  GET_APPOINTMENT,
-  DELETE_APPOINTMENT,
-} from "../../redux/types/appointmentType.js";
+import {GET_APPOINTMENT,DELETE_APPOINTMENT} from "../../redux/types/appointmentType.js";
 import Moment from "react-moment";
 import "moment/locale/es";
 
-const Profile = (props) => {
-  let history = useHistory();
+  const Profile = (props) => {
+    let history = useHistory();
+
   const direccioname = () => {
     history.push(`/appointment`);
   };
+
   const getAppointments = async () => {
     let result = await axios.get(
       `http://localhost:3001/customers/${props.user.customer?.id}/appointments/`,
@@ -24,9 +23,11 @@ const Profile = (props) => {
     // console.log(result.data)
     props.dispatch({ type: GET_APPOINTMENT, payload: result.data });
   };
+
   useEffect(() => {
     getAppointments();
   }, []);
+
   const deleteAppointment = async () => {
     let result = await axios.delete(
       `http://localhost:3001/appointments/${props.appointment?.id}`
@@ -34,6 +35,7 @@ const Profile = (props) => {
     props.dispatch({ type: DELETE_APPOINTMENT, payload: result.data });
     console.log(result);
   };
+
   if (props.user?.token) {
     return (
       <div className="profile">
@@ -81,10 +83,12 @@ const Profile = (props) => {
     );
   }
 };
+
 const mapStateToProps = (state) => {
   return {
     user: state.userReducer.user,
     appointment: state.appointmentReducer.appointment,
-  };
+  }
 };
+
 export default connect(mapStateToProps)(Profile);
