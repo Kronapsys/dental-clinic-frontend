@@ -29,15 +29,15 @@ import "moment/locale/es";
   }, []);
 
 
-  const deleteAppointment = async () => {
+  const deleteAppointment = async (id) => {
     let result = await axios.delete(
-      `http://localhost:3001/appointments/${props.appointment?.id}`,
+      `http://localhost:3001/appointments/${id}`,
       { headers: { Authorization: `Bearer ${props.user.token}` } }
     );
     props.dispatch({ type: DELETE_APPOINTMENT, payload: result.data });
     console.log(result);
+    getAppointments();
   };
-
 
 
   if (props.user?.token) {
@@ -72,7 +72,7 @@ import "moment/locale/es";
                       <div className="deleteCita">
                         <i
                           className="fas fa-ban"
-                          onClick={deleteAppointment}
+                          onClick={ ()=> deleteAppointment(appointment.id)}
                         ></i>
                       </div>
                     </div>
