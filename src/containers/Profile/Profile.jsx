@@ -51,7 +51,7 @@ import "moment/locale/es";
           ?
           (
             <>
-              <div className="cardCita">NO TIENES CITAS ACTUALMENTE</div>
+              <div className="cardCita"><p className="noCitas">NO TIENES CITAS ACTUALMENTE</p></div>
             </>
           )
           :

@@ -59,6 +59,14 @@
     color: white;
 }
 
+.noCitas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poiret One', cursive;
+    color: white;
+}
+
 .deleteCita {
     border-radius: 1em;
     display: flex;
