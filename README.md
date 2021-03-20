@@ -10,6 +10,7 @@ Write the following commands line to start: </br>
 ## technologies used 🛠️
 ![JS](https://i.imgur.com/lDoNwKn.png)
 ![HTML5 & CSS3](https://i.imgur.com/YGFHOGJ.png)
+![React & Redux](https://i.imgur.com/MFdnMMW.png)
 
 ## dependencies
 
