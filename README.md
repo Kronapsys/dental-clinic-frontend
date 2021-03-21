@@ -26,6 +26,13 @@ Write the following commands line to start: </br>
 - redux-localstorage-simple </br>
 - web-vitals </br>
 
+## future features
+- When you are logged as Admin, if you click on customer ID you will get redirected to customer profile. </br>
+- Add some popups with information when you delete an appointment, when get login, when get an appointment, etc... </br>
+- Add hour to datePicker and if another customer ask for the same hour and day it will not let you make an appointment. </br>
+- Fix when you take an appointment, you can get it from a past date </br>
+- Complete pages like staff, facilities and about us with some information </br>
+
 ## authors 🧐
 <a href="https://github.com/vicGeo">@vicGeo</a> </br>
 <a href="https://github.com/Kronapsys">@Kronapsys</a> </br>

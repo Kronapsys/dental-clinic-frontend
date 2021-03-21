@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 
-.profile {
+.adminProfile {
     height: 80.5vh;
     background-image: url(../../img/admin-background.jpg);
     background-position: center;
@@ -12,6 +12,8 @@
 
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
     color: white;
 }
@@ -36,12 +38,13 @@
     height: 3em;
     margin: 1em;
     border-radius: 1em;
-    background-color: rgba(0, 0, 0, 0.274);
+    background-color: rgba(0, 0, 0, 0.534);
 
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     color: white;
+    font-weight: bold;
 }
 
 .fechaCita {

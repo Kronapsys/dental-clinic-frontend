@@ -42,10 +42,8 @@ import "moment/locale/es";
 
   if (props.user?.token) {
     return (
-      <div className="profile">
-        <div>
-          <CustomerProfile />
-        </div>
+      <div className="adminProfile">
+        
         <div className="visorCitas">
           {props.appointment[0] === undefined
           ?
@@ -68,6 +66,9 @@ import "moment/locale/es";
                       </div>
                       <div className="descripcionCita">
                             {appointment.description}
+                      </div>
+                      <div className="customerId">
+                            Customer ID: {appointment.customerId}
                       </div>
                       <div className="deleteCita">
                         <i
