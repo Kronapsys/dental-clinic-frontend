@@ -6,6 +6,7 @@ import  checkError  from '../../utils/util';
 import {LOGIN} from '../../redux/types/userType.js';
 import {connect} from 'react-redux';
 
+
 const Login = (props) => {
 
     let history = useHistory();
@@ -42,11 +43,17 @@ const Login = (props) => {
         if(errorMessage) {
             return;
         }
+        if(props.user.customer.email !== "admin@admin.com") {
+            let result = await axios.post("http://localhost:3001/signin", dataLogin);
+            props.dispatch({type: LOGIN, payload: result.data});
 
-        let result = await axios.post("http://localhost:3001/signin", dataLogin);
-        props.dispatch({type: LOGIN, payload: result.data});
-        history.push(`/`);
-        console.log(result.data);
+            history.push(`/profile`);
+            console.log(result.data);
+
+        } else {
+            history.push(`/adminProfile`);
+
+        }
     };
 
     // <pre>{JSON.stringify(dataLogin, null,2)}</pre>
@@ -68,4 +75,13 @@ const Login = (props) => {
     );
 };
 
-export default connect()(Login);
+
+const mapStateToProps = (state) => {
+    return {
+        user: state.userReducer.user,
+    };
+};
+
+export default connect(mapStateToProps)(Login);
+
+// export default connect()(Login);
