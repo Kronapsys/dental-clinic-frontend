@@ -82,11 +82,6 @@ import "moment/locale/es";
             </>
           )}
         </div>
-        <div className="botonCita">
-          <button className="btnCita" onClick={direccioname}>
-            PEDIR CITA
-          </button>
-        </div>
       </div>
     );
   }
