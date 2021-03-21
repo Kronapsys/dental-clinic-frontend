@@ -11,6 +11,7 @@ import About from './containers/About/About';
 import Header from './components/Header/Header';
 import NavBar from './components/Navbar/NavBar';
 import Appointment from './containers/Appointment/Appointment';
+import AdminProfile from './containers/AdminProfile/AdminProfile';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path='/Facilities' exact component={Facilities}/>
           <Route path='/AboutUs' exact component={About}/>
           <Route path='/appointment' exact component={Appointment}/>
+          <Route path='/adminProfile' exact component={AdminProfile}/>
         </Switch>
 
         <Footer/>

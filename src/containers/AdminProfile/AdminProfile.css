@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+.profile {
+    height: 80.5vh;
+    background-image: url(../../img/profile-background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.visorCitas {
+    width: 42em;
+    height: 31.4em;
+    background-color: rgba(0, 0, 0, 0.274);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 1em;
+    margin: 2.5em 1.25em;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: auto;
+    
+}
+
+.cardCita {
+    width: 40em;
+    height: 3em;
+    margin: 1em;
+    border-radius: 1em;
+    background-color: rgba(0, 0, 0, 0.274);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.fechaCita {
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6em;
+    font-family: 'Poiret One', cursive;
+    color: white;
+}
+
+.descripcionCita {
+    display: flex;
+    align-items: center;
+    width: 32em;
+    font-family: 'Poiret One', cursive;
+    color: white;
+}
+
+.noCitas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poiret One', cursive;
+    color: white;
+}
+
+.deleteCita {
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;
+}
+
+.fa-ban {
+    color: red;
+    cursor: pointer;
+}
+
+.botonCita {
+    margin-top: 3em;
+}
+
+.btnCita {
+    border-radius: .5em;
+    color: black;
+    font-weight: bold;
+    background-color: yellow;
+    padding: 14px 40px;
+    font-size: large;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-family: 'Roboto', sans-serif;
+    width: 250px;
+}
+
+.btnCita:hover {
+    background-color: red;
+    color: white;
+
+}
+
