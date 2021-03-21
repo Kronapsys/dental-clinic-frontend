@@ -26,6 +26,7 @@ const Login = (props) => {
                 event.target.type === "number"
                     ? +event.target.value
                     : event.target.value,
+
         });
     };
 
@@ -43,16 +44,23 @@ const Login = (props) => {
         if(errorMessage) {
             return;
         }
-        if(props.user.customer.email !== "admin@admin.com") {
-            let result = await axios.post("http://localhost:3001/signin", dataLogin);
-            props.dispatch({type: LOGIN, payload: result.data});
+
+        let body = {
+            email : dataLogin.email,
+            password : dataLogin.password
+        }
+
+
+        if(dataLogin.email !== "admin@admin.com") {
+            let result = await axios.post("http://localhost:3001/signin", body);
+                props.dispatch({type: LOGIN, payload: result.data});
 
             history.push(`/profile`);
             console.log(result.data);
 
+
         } else {
             history.push(`/adminProfile`);
-
         }
     };
 
@@ -83,5 +91,3 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps)(Login);
-
-// export default connect()(Login);
